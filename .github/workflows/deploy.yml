@@ -24,10 +24,18 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
 
       - name: Build image
-        run: docker build -t mundial-app .
+        run: |
+          docker build -t mundial-app .
 
-      - name: Ejemplo Push ECR
-        run: echo "Configurar URI ECR del laboratorio"
+      - name: Tag image
+        run: |
+          docker tag mundial-app:latest \
+          743808480480.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
+
+      - name: Push image
+        run: |
+          docker push \
+          743808480480.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
 
       - name: Deploy EKS
         run: echo "Configurar kubectl y actualizar deployment"
