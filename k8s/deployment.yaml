@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: mundial-app
-        image: REEMPLAZAR_ECR_URI:latest
+        image: 743808480480.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
         ports:
         - containerPort: 5000
