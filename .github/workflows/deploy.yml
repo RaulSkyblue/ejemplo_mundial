@@ -15,9 +15,9 @@ jobs:
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws-access-key-id: ${{ secrets.ASIAU6GDYEY445MLQYEM }}
+          aws-secret-access-key: ${{ secrets.Ky9ndOJOKM4hcn2vjcQnFQm2IM3xPjLk9wSFHgzH }}
+          aws-session-token: ${{ secrets.IQoJb3JpZ2luX2VjEFgaCXVzLXdlc3QtMiJHMEUCIQD5hKmXnX9UJlfCtaEjsp+ua22cGAhFJt8Pqj6Y88IQzwIgDGL4gD8mBJ8cP8HdjOOyUsU4JsLCxHDv4pJotHJ8q0cqrgIIIRAAGgwzMzk3MTI5NDM2NzMiDNJuV0jWVSLQ7UxIwCqLAt/avNvtusOVBYP2FW0GHXxc9yXxmzTjt0X+Iuf2FCyxdwgsGxhI/FQnLWL4MwoQwYCsE8gCL/gYZao0E5QCMBTbz08ChHse8M4Vo9xEWuLC/Wg5OxQ3SCjBn43hnTAIqtib9OrRWiDHQPmoBWittQc6ATS7Aku5/DQfjgByjSscq6F/eQDH+CjbPN5B4Qd0h+zS/1iucX53+Bk+ws1BoFnHUZytIq6RA2v3izGNn1s2l13Y6J/wfUAQNim64AM60DjmDxg98UtYQ0ROsauL2gdUJUX1hum6sDXG1CpqBAjNXWxRwID9fqg115eXZTt57w+jHdaqRzJU2bDBZaNU8xpcABH6DIymTZoC0jC6qbLRBjqdAYuD4cof+4ugQtrDX2UCGSaGHslyL7mIlf/m99xDGFhnjz3HJBYBtwi5oDeBW8RMcO/32jE8lj4e+F8Oo0ekdrcrUG6JJNGUVc0uVaQNTcUgos2tCQJcmQ9Wiu//fqMPc9oSgM2j02wQJQPlRLLMjD+OnDWwYfAa1wjAIk9T/xlIMoTSiy/6ZYirUPl5G7o2LOVo926Xq3Hrdj0Emzk= }}
           aws-region: us-east-1
 
       - name: Login ECR
@@ -30,12 +30,12 @@ jobs:
       - name: Tag image
         run: |
           docker tag mundial-app:latest \
-          743808480480.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
+          339712943673.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
 
       - name: Push image
         run: |
           docker push \
-          743808480480.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
+          339712943673.dkr.ecr.us-east-1.amazonaws.com/mundial-app:latest
 
       - name: Deploy EKS
         run: echo "Configurar kubectl y actualizar deployment"
